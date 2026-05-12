@@ -1006,6 +1006,8 @@ h1, h2, h3, .logo {
 
 .contact-item p {
     font-weight: 500;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .social-links {
