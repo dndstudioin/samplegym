@@ -1006,8 +1006,6 @@ h1, h2, h3, .logo {
 
 .contact-item p {
     font-weight: 500;
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 
 .social-links {
@@ -1693,7 +1691,15 @@ h1, h2, h3, .logo {
         letter-spacing: 2px; 
     }
     .calculator-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .contact-item {
+        gap: 0.8rem;
+    }
+    .contact-item p {
+        font-size: 0.8rem;
+        white-space: nowrap;
     }
 }
 
