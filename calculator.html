@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator | DND Studio</title>
+    <meta name="description" content="Calculate your daily caloric needs with precision. Use our professional gym calculator to determine maintenance, cutting, and bulking targets.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-d">D</span><span class="logo-n">N</span><span class="logo-d2">D</span>
+                <span class="logo-studio">STUDIO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#trainers">Trainers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="calculator.html" class="active">Calculator</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-primary">Join Now</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="calculator-hero">
+        <div class="container hero-container">
+            <h1 class="premium-title">BODY<span>STATS</span></h1>
+            <p class="calculator-hero-subtitle">PRECISION CALORIC ARCHITECTURE</p>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-glass-card">
+                <div class="calculator-header">
+                    <span class="accent-text">ESTIMATE YOUR POTENTIAL</span>
+                    <h2>DAILY CALORIC ARCHITECTURE</h2>
+                    <p>Determine your exact maintenance, cutting, and bulking targets using our professional-grade biomechanical algorithm.</p>
+                </div>
+
+                <form id="calorie-form" class="calculator-form-premium">
+                    <div class="form-row">
+                        <div class="form-group-premium">
+                            <label><i data-lucide="users"></i> Gender</label>
+                            <div class="radio-group">
+                                <label class="radio-btn">
+                                    <input type="radio" name="gender" value="male" checked>
+                                    <span>MALE</span>
+                                </label>
+                                <label class="radio-btn">
+                                    <input type="radio" name="gender" value="female">
+                                    <span>FEMALE</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group-premium">
+                            <label for="age"><i data-lucide="calendar"></i> Age</label>
+                            <input type="number" id="age" placeholder="25" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group-premium">
+                            <label for="weight"><i data-lucide="scale"></i> Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="75" required>
+                        </div>
+                        <div class="form-group-premium">
+                            <label for="height"><i data-lucide="ruler"></i> Height (cm)</label>
+                            <input type="number" id="height" placeholder="175" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-premium full-width">
+                        <label for="activity"><i data-lucide="activity"></i> Training Frequency</label>
+                        <select id="activity" required>
+                            <option value="1.2">SEDENTARY (Office Job, No Training)</option>
+                            <option value="1.375">LIGHTLY ACTIVE (Training 1-3x / week)</option>
+                            <option value="1.55">MODERATELY ACTIVE (Training 3-5x / week)</option>
+                            <option value="1.725">VERY ACTIVE (Hard Training 6-7x / week)</option>
+                            <option value="1.9">ELITE ATHLETE (Double Sessions / Manual Labor)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-glow">CALCULATE TARGETS</button>
+                </form>
+
+                <div id="calculator-result" class="calculator-result-premium hidden">
+                    <div class="result-card main-result">
+                        <span class="result-label">MAINTENANCE CALORIES</span>
+                        <div class="calories-value-premium"><span id="calories-value">0</span></div>
+                        <p class="result-desc">The daily fuel required to preserve your current physique.</p>
+                    </div>
+                    
+                    <div class="result-grid-premium">
+                        <div class="result-card loss">
+                            <i data-lucide="trending-down"></i>
+                            <span class="result-label">FAT LOSS</span>
+                            <div class="sub-calories"><span id="weight-loss">0</span> kcal</div>
+                        </div>
+                        <div class="result-card gain">
+                            <i data-lucide="trending-up"></i>
+                            <span class="result-label">MUSCLE GAIN</span>
+                            <div class="sub-calories"><span id="weight-gain">0</span> kcal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-disclaimer-premium">
+                    <p><i data-lucide="info"></i> These results are estimations based on the Mifflin-St Jeor equation. Individual metabolic variances may apply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <span class="logo-d">D</span><span class="logo-n">N</span><span class="logo-d2">D</span>
+                        <span class="logo-studio">STUDIO</span>
+                    </div>
+                    <p>Experience the evolution of fitness. Our elite facility and science-backed training methods are designed to transform your performance and physique.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="index.html#trainers">Trainers</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Working Hours</h4>
+                    <ul>
+                        <li>Mon - Fri: 5:00 AM - 10:00 PM</li>
+                        <li>Sat: 6:00 AM - 8:00 PM</li>
+                        <li>Sun: 8:00 AM - 12:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DND STUDIO. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('calorie-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const age = parseFloat(document.getElementById('age').value);
+            const activity = parseFloat(document.getElementById('activity').value);
+            
+            let bmr;
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+            
+            const tdee = Math.round(bmr * activity);
+            
+            document.getElementById('calories-value').textContent = tdee;
+            document.getElementById('weight-loss').textContent = tdee - 500;
+            document.getElementById('weight-gain').textContent = tdee + 500;
+            
+            document.getElementById('calculator-result').classList.remove('hidden');
+            
+            // Scroll to result
+            document.getElementById('calculator-result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>

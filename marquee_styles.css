@@ -1,0 +1,53 @@
+
+/* Review Marquee Styles */
+.review-marquee-container {
+    background: #0d0d0d;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+
+.review-marquee-track {
+    display: flex;
+    gap: 4rem;
+    animation: marquee-review 40s linear infinite;
+    width: max-content;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.review-stars {
+    color: #ffb700;
+    font-size: 0.8rem;
+}
+
+.review-text {
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-white);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.review-author {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+@keyframes marquee-review {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.review-marquee-container:hover .review-marquee-track {
+    animation-play-state: paused;
+}
