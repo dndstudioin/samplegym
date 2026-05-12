@@ -1458,6 +1458,8 @@ h1, h2, h3, .logo {
     font-size: 2rem;
     color: var(--text-white);
     margin-bottom: 1.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .calculator-form-premium {
@@ -1689,6 +1691,9 @@ h1, h2, h3, .logo {
     .premium-title { 
         font-size: 1.8rem; 
         letter-spacing: 2px; 
+    }
+    .calculator-header h2 {
+        font-size: 1.5rem;
     }
 }
 
