@@ -1081,6 +1081,16 @@ h1, h2, h3, .logo {
     .footer-logo p {
         margin: 0 auto;
     }
+    
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        padding: 4rem 2rem;
+        width: 100%;
+    }
 }
 
 .footer-logo .logo {
