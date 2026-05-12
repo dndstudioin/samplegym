@@ -1491,6 +1491,7 @@ h1, h2, h3, .logo {
 
 .form-group-premium input, 
 .form-group-premium select {
+    width: 100%;
     background: #1a1a1a;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.2rem;
@@ -1532,7 +1533,7 @@ h1, h2, h3, .logo {
 }
 
 .radio-btn {
-    flex: 0 0 140px;
+    flex: 1;
     cursor: pointer;
 }
 
