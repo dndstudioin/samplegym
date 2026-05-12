@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     });
 
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('mobile-active');
+            const icon = mobileMenu.querySelector('i');
+            icon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        });
+    });
+
     // Scroll Animations using Intersection Observer
     const observerOptions = {
         threshold: 0.1,
