@@ -332,6 +332,14 @@ h1, h2, h3, .logo {
         width: 100%;
         text-align: center;
     }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info, .contact-form {
+        padding: 3rem 1.5rem;
+    }
 }
 
 /* Hero Section */
